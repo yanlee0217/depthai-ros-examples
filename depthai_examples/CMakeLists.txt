@@ -98,6 +98,8 @@ if ( ament_cmake_FOUND )
   dai_add_node_ros2(stereo_inertial_node ros2_src/stereo_inertial_publisher.cpp)
   dai_add_node_ros2(stereo_node ros2_src/stereo_publisher.cpp)
   dai_add_node_ros2(yolov4_spatial_node ros2_src/yolov4_spatial_publisher.cpp)
+  dai_add_node_ros2(rgb_capture_service ros2_src/rgb_capture_service.cpp)
+  dai_add_node_ros2(yanle_srv_node ros2_src/ynale_srv_node.cpp)
     
   target_compile_definitions(mobilenet_node PRIVATE BLOB_NAME="${mobilenet_blob_name}")
   target_compile_definitions(yolov4_spatial_node PRIVATE BLOB_NAME="${tiny_yolo_v4_blob_name}")
@@ -121,11 +123,12 @@ if ( ament_cmake_FOUND )
   install(TARGETS
           crop_control_service
           mobilenet_node
-          rgb_node
           rgb_stereo_node
           stereo_inertial_node
           stereo_node
           yolov4_spatial_node
+          rgb_capture_service
+          ynale_srv_node
           DESTINATION lib/${PROJECT_NAME})
           
   ament_package()
