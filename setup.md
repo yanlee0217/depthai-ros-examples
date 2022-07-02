@@ -5,5 +5,7 @@ Depends:
 
 
 Yanleee features:
-- 
+- still capture service
+- abstract pipeline
+- updated urdf for sensor-street 
 
